@@ -15,7 +15,7 @@ if(randomNumber == 1){
 	computerMove = 'nożyce';
 }
 
-printMessage('Mój ruch to: ' + computerMove);
+printMessage('Ruch komputera: ' + computerMove);
 
 // Ruchy gracza
 
@@ -33,4 +33,42 @@ if(playerInput == '1'){
 	playerMove = 'nożyce';
 }
 
-printMessage('Twój ruch to: ' + playerMove);
+printMessage('Ruch gracza: ' + playerMove);
+
+// Wynik gry
+
+// Remis
+if (computerMove == playerMove) {
+	printMessage('Remis!');
+}
+// Wygrana komutera
+
+if( computerMove == 'kamień' && playerMove == 'nożyce'){
+	printMessage('Wygrana komputera');
+} 
+	else if (computerMove == 'nożyce' && playerMove == 'papier') {
+		printMessage('Wygrana komputera');
+} 
+	else if (computerMove == 'papier' && playerMove == 'kamień') {
+	printMessage('Wygrana komputera');
+}
+// Wygrana gracza
+
+if( playerMove == 'kamień' && computerMove == 'nożyce'){
+	printMessage('Wygrana gracza');
+} 
+	else if (playerMove == 'nożyce' && computerMove == 'papier') {
+		printMessage('Wygrana gracza');
+}
+	else if (playerMove == 'papier' && computerMove == 'kamień') {
+		printMessage('Wygrana gracza');
+	}
+
+
+if (playerMove == 'nieznany ruch') {
+	printMessage('Nieważna runda, błędny ruch gracza');
+}
+
+
+
+
