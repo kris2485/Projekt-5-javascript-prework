@@ -1,2 +1,32 @@
+.container {
+  padding-top: 30px;
+  text-align: center;
+}
+
+.container #buttons {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.container #buttons [id^="play-"] {
+  color: #fff;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.container #buttons #play-rock {
+  background: #777777;
+}
+
+.container #buttons #play-paper {
+  background: #5BC1DE;
+  margin-right: 20px;
+  margin-left: 20px;
+}
+
+.container #buttons #play-scissors {
+  background: #D9534F;
+}
 
 /*# sourceMappingURL=style.css.map */

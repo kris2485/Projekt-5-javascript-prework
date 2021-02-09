@@ -1,0 +1,28 @@
+.container {
+	padding-top: 30px;
+	text-align: center;
+
+		#buttons {
+			display: flex;
+    		justify-content: center;
+    		margin-bottom: 30px;
+    		
+    		[id^="play-"] {
+    			color: #fff;
+    			padding: 10px;
+    			border-radius: 10px;
+    		}
+    		
+    		#play-rock {
+    			background: #777777;
+    		}
+    		#play-paper {
+    			background: #5BC1DE;
+    			margin-right: 20px;
+    			margin-left: 20px;
+    		}
+    		#play-scissors {
+    			background: #D9534F;
+    		}
+		}
+}

@@ -17,22 +17,22 @@ function playGame (playerInput) {
 	}
 	// Funkcjca wyświetlania wyniku
 	function displayResult (computerMove, playerMove) {
-		printMessage('Zagrałem ' + computerMove + ', a Ty ' + playerMove + '!');
+		printMessage('Zagrałem ' + computerMove + ', a Ty graczu zagrałeś ' + playerMove + '!');
 
 		if(computerMove == 'kamień' && playerMove == 'nożyce'){
-			printMessage('Wygrana komputera');
+			printMessage('Wygrywam!');
 		} else if (computerMove == 'nożyce' && playerMove == 'papier') {
-			printMessage('Wygrana komputera');
+			printMessage('Wygrywam!');
 		} else if (computerMove == 'papier' && playerMove == 'kamień') {
-			printMessage('Wygrana komputera');
+			printMessage('Wygrywam!');
 		} else if ( playerMove == 'kamień' && computerMove == 'nożyce'){
-			printMessage('Wygrana gracza');
+			printMessage('Miałeś farta i wygrałeś!');
 		} else if (playerMove == 'nożyce' && computerMove == 'papier') {
-			printMessage('Wygrana gracza');
+			printMessage('Miałeś farta i wygrałeś!');
 		} else if (playerMove == 'papier' && computerMove == 'kamień') {
-			printMessage('Wygrana gracza');
+			printMessage('Miałeś farta i wygrałeś!');
 		} else if (computerMove == playerMove) {
-			printMessage('Remis!');
+			printMessage('Mamy remis!');
 		}
 	}
 
