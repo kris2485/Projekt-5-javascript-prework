@@ -1,3 +1,9 @@
+
+let playerPick = document.getElementById('player'),
+	computerPick = document.getElementById('computer'),
+	playerScore = 0,
+	computerScore = 0;
+
 function playGame (playerInput) {
 
 	clearMessages();
@@ -34,6 +40,7 @@ function playGame (playerInput) {
 		} else if (computerMove == playerMove) {
 			printMessage('Mamy remis!');
 		}
+		setGamePoints();
 	}
 
 	// Ruchy komputera
@@ -51,12 +58,8 @@ function playGame (playerInput) {
 	displayResult(computerMove, playerMove);
 
 // Liczenie wyniku
-	let playerPick = document.getElementById('player').innerHTML ='Player ' + setGamePoints(),
-		computerPick = document.getElementById('computer').innerHTML = 'Computer ' + setGamePoints(),
-		playerScore = 0,
-		computerScore = 0;
 
-		function setGamePoints (computerMove, playerMove) {
+		function setGamePoints () {
 			if(computerMove == 'kamień' && playerMove == 'nożyce'){
 				computerScore++;
 			} else if (computerMove == 'nożyce' && playerMove == 'papier') {
@@ -70,6 +73,8 @@ function playGame (playerInput) {
 			} else if (playerMove == 'papier' && computerMove == 'kamień') {
 				playerScore++;
 			}
+			playerPick.innerHTML = "Player: " + playerScore;
+			computerPick.innerHTML = "Computer: " + computerScore;
 		}
 
 
