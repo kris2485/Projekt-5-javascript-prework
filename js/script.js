@@ -37,11 +37,10 @@ function playGame (playerInput) {
 	}
 
 	// Ruchy komputera
-	let randomNumber = Math.floor(Math.random() * 3 + 1);
+	let randomNumber = Math.floor(Math.random() * 3 + 1),
+		computerMove = getMoveName(randomNumber);
 
 	console.log('Wylosowana liczba to: ' + randomNumber);
-
-	let computerMove = getMoveName(randomNumber);
 
 	// Ruchy gracza
 
@@ -50,6 +49,30 @@ function playGame (playerInput) {
 	let playerMove = getMoveName(playerInput);
 
 	displayResult(computerMove, playerMove);
+
+// Liczenie wyniku
+	let playerPick = document.getElementById('player').innerHTML ='Player ' + setGamePoints(),
+		computerPick = document.getElementById('computer').innerHTML = 'Computer ' + setGamePoints(),
+		playerScore = 0,
+		computerScore = 0;
+
+		function setGamePoints (computerMove, playerMove) {
+			if(computerMove == 'kamień' && playerMove == 'nożyce'){
+				computerScore++;
+			} else if (computerMove == 'nożyce' && playerMove == 'papier') {
+				computerScore++;
+			} else if (computerMove == 'papier' && playerMove == 'kamień') {
+				computerScore++;
+			} else if ( playerMove == 'kamień' && computerMove == 'nożyce'){
+				playerScore++;
+			} else if (playerMove == 'nożyce' && computerMove == 'papier') {
+				playerScore++;
+			} else if (playerMove == 'papier' && computerMove == 'kamień') {
+				playerScore++;
+			}
+		}
+
+
 }
 document.getElementById('play-rock').addEventListener('click', function(){
   	playGame(1);
@@ -62,6 +85,7 @@ document.getElementById('play-paper').addEventListener('click', function(){
 document.getElementById('play-scissors').addEventListener('click', function(){
   	playGame(3);
 });
+
 
 
 
