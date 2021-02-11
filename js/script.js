@@ -26,21 +26,22 @@ function playGame (playerInput) {
 		printMessage('Zagrałem ' + computerMove + ', a Ty graczu zagrałeś ' + playerMove + '!');
 
 		if(computerMove == 'kamień' && playerMove == 'nożyce'){
-			printMessage('Wygrywam!');
+			printMessage('Wygrywam rundę!');
 		} else if (computerMove == 'nożyce' && playerMove == 'papier') {
-			printMessage('Wygrywam!');
+			printMessage('Wygrywam rundę!');
 		} else if (computerMove == 'papier' && playerMove == 'kamień') {
-			printMessage('Wygrywam!');
+			printMessage('Wygrywam rundę!');
 		} else if ( playerMove == 'kamień' && computerMove == 'nożyce'){
-			printMessage('Miałeś farta i wygrałeś!');
+			printMessage('Miałeś farta i wygrałeś rundę!');
 		} else if (playerMove == 'nożyce' && computerMove == 'papier') {
-			printMessage('Miałeś farta i wygrałeś!');
+			printMessage('Miałeś farta i wygrałeś rundę!');
 		} else if (playerMove == 'papier' && computerMove == 'kamień') {
-			printMessage('Miałeś farta i wygrałeś!');
+			printMessage('Miałeś farta i wygrałeś rundę!');
 		} else if (computerMove == playerMove) {
 			printMessage('Mamy remis!');
 		}
 		setGamePoints();
+		checkGameWinner();
 	}
 
 	// Ruchy komputera
@@ -76,6 +77,14 @@ function playGame (playerInput) {
 			playerPick.innerHTML = "Player: " + playerScore;
 			computerPick.innerHTML = "Computer: " + computerScore;
 		}
+
+		function checkGameWinner () {
+			if (playerScore == 10) {
+				alert('Chyba oszukiwałeś, bo wygrałeś całą grę :-|');
+			} else if (computerScore == 10) {
+				alert('Hah wygałem grę!');
+			}
+		}	
 
 
 }
