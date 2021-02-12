@@ -82,12 +82,18 @@ function playGame (playerInput) {
 			if (playerScore == 10) {
 				alert('Chyba oszukiwałeś, bo wygrałeś całą grę :-|');
 				alert('Zaczynamy od nowa');
-				playerScore == 0;
+				playerScore = 0;
+				computerScore = 0;
+				computerMove = "";
+        		playerMove = "";
 				setGamePoints();
 			} else if (computerScore == 10) {
 				alert('Hah wygałem grę!');
 				alert('Zaczynamy od nowa');
-				computerScore == 0;
+				playerScore = 0;
+				computerScore = 0;
+				computerMove = "";
+        		playerMove = "";
 				setGamePoints();
 			}
 		}	
