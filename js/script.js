@@ -1,7 +1,8 @@
 
-let playerPick = document.getElementById('player'),
-	computerPick = document.getElementById('computer'),
-	playerScore = 0,
+const playerPick = document.getElementById('player'),
+	  computerPick = document.getElementById('computer');
+
+let playerScore = 0,
 	computerScore = 0;
 
 function playGame (playerInput) {
